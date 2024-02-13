@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form">
+        <p class="verification">Votre age : </p>
+        <div class="flex">
+        <label>
+            <input required type="text" class="input" id="age">
+            <span></span>
+        </label>
+
+        <button onclick="verificationAge()" class="submit">Submit</button>  
+    </form>
+    <script>        
+        
+        const form = document.querySelector(".form");
+        form.addEventListener('submit', function(e) {  
+        e.preventDefault();});
+
+    function verificationAge () {
+        const age = document.getElementById("age").value;
+        
+    if (age >= 20){
+        window.location.href="formulaire.html";
+    }else {
+        alert("Vous etes pas majeur !");
+    }
+}
+    </script>
+</body>
+</html>
