@@ -24,11 +24,11 @@ function direction() {
     window.location.href="https://2023.webdev-cf2m.be/Erhan/PrefoSiteWeb/";
   }
 
-  function myFunction() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
   }
+}
