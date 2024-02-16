@@ -10,8 +10,9 @@ function control () {
         e.preventDefault();});
 
 
-    if (nom.length < 5 && prenom.length < 5){
-      alert("Le nom ou prénom doit avoir au moins 5 caractéres");
+    if (nom.length > 5 || prenom.length > 5){
+      alert("Le nom ou prénom doit avoir max 5 caractéres");
+      return;
     }else if  
     (/[A-Z]/.test(password) 
     && /\d/.test(password) 
