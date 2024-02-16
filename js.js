@@ -15,6 +15,8 @@ function control () {
     {
         alert("Bienvenue " + prenom);
         setTimeout(direction, 2000);        
+    }else {
+      alert("Password n'est pas valide");
     }
 }
 
