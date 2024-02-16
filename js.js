@@ -3,19 +3,25 @@ function control () {
     const form = document.querySelector(".form");
     const nom = document.getElementById("nom").value;
     const prenom = document.getElementById("prenom").value;
-    const password = document.getElementById("password").value;
+    const password = document.getElementById("password").value;    
 
+    
     form.addEventListener('submit', function(e) {  
         e.preventDefault();});
 
-    if (/[A-Z]/.test(password) 
+
+    if (nom.length < 5 && prenom.length < 5){
+      alert("Le nom ou prénom doit avoir au moins 5 caractéres");
+    }else if  
+    (/[A-Z]/.test(password) 
     && /\d/.test(password) 
     && /[!@#$%^&*(),.?":|<>]/.test(password)
     && password.length >=10 )
     {
         alert("Bienvenue " + prenom);
         setTimeout(direction, 2000);        
-    }else {
+    } 
+    else {
       alert("Password n'est pas valide");
     }
 }
